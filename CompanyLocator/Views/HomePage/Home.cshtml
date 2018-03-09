@@ -1,0 +1,26 @@
+﻿@model List<CompanyLocator.Models.Company>
+@{
+    /**/
+
+    ViewBag.Title = "FindITCompany";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Enter City:")<br />
+    @Html.TextBox("city")<br />
+    <button type="submit">Search</button>
+    <br />
+    <br />
+    <br />
+    if (Model != null)
+    {
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>@item.Name</li>
+                <li>@item.Address</li>
+            }
+        </ul>
+    }
+}
