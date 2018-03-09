@@ -7,12 +7,17 @@
 
 @using (Html.BeginForm())
 {
-    @Html.Label("Enter City:")<br />
+
+    <br />
+    @Html.Label("Enter Location:")<br />
     @Html.TextBox("city")<br />
     <button type="submit">Search</button>
     <br />
     <br />
+    @Html.Label("The Results are : ")<br />
     <br />
+    
+
     if (Model != null)
     {
         <ul>
